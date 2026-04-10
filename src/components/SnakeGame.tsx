@@ -12,7 +12,7 @@ const INITIAL_SNAKE: Point[] = [
   { x: 10, y: 12 },
 ];
 const INITIAL_DIRECTION: Direction = 'UP';
-const INITIAL_SPEED = 150;
+const INITIAL_SPEED = 250;
 
 interface SnakeGameProps {
   lang: 'zh' | 'en';
@@ -71,7 +71,8 @@ export default function SnakeGame({ lang, theme }: SnakeGameProps) {
       (newDir === 'UP' && lastQueued === 'DOWN') ||
       (newDir === 'DOWN' && lastQueued === 'UP') ||
       (newDir === 'LEFT' && lastQueued === 'RIGHT') ||
-      (newDir === 'RIGHT' && lastQueued === 'LEFT')
+      (newDir === 'RIGHT' && lastQueued === 'LEFT') ||
+      newDir === lastQueued
     ) {
       return;
     }

@@ -41,6 +41,14 @@ export default function App() {
           </button>
         </div>
         <div className="flex items-center gap-1 sm:gap-2 shrink-0">
+          <a
+            href="https://www.youtube.com/watch?v=xvFZjo5PgG0"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-xs sm:text-sm font-bold text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 hover:underline px-1 sm:px-2 whitespace-nowrap transition-colors"
+          >
+            {lang === 'zh' ? '點我進個人網站' : 'My Website'}
+          </a>
           <button
             onClick={() => setLang(l => l === 'zh' ? 'en' : 'zh')}
             className="p-2 rounded-lg hover:bg-slate-200 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 font-bold flex items-center gap-1 transition-colors"
